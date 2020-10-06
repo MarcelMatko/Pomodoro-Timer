@@ -1,0 +1,68 @@
+<div class="holder">
+    <div class="justify-content-center timer mt-3">
+        <div class="text-center mb-3">
+            <button class="btn-row active" onClick="c1()" id="btn1">Study</button>
+            <button class="btn-row" onClick="c2()" id="btn2">Short Break</button>
+            <button class="btn-row" onClick="c3()" id="btn3">Long Break</button>
+        </div>
+        <h1 class="text-white text-center timer-text mb-3" id="timer">25:00{{timer}}</h1>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-r" onClick="start()"><strong class="button-text" id="start-btn">START</strong></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*const startingMinutes = 25;
+    let time = startingMinutes * 60;
+
+    const timer = document.querySelector('#timer');
+    const startBtn = document.querySelector('#start-btn');
+
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    timer.innerHTML = `${minutes}:${seconds}`;
+
+    function updateCountdown() {
+        setInterval(function() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        timer.innerHTML = `${minutes}:${seconds}`;
+        time--;
+        }, 1000)
+    }
+
+function start()
+{
+    updateCountdown();
+};*/
+
+
+
+
+
+    
+
+    function c1() {
+        document.querySelector("#content").style.backgroundColor = "rgb(240, 91, 86)";
+        document.getElementById("btn1").classList.add('active');
+        document.getElementById("btn2").classList.remove('active');
+        document.getElementById("btn3").classList.remove('active');
+    }
+    function c2() {
+        document.querySelector("#content").style.backgroundColor = "rgb(86 155 240)";
+        document.getElementById("btn2").classList.add('active');
+        document.getElementById("btn1").classList.remove('active');
+        document.getElementById("btn3").classList.remove('active');
+    }
+    function c3() {
+        document.querySelector("#content").style.backgroundColor = "rgb(167 86 240)";
+        document.getElementById("btn3").classList.add('active');
+        document.getElementById("btn2").classList.remove('active');
+        document.getElementById("btn1").classList.remove('active');
+    }
+</script>
